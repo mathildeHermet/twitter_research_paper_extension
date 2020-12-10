@@ -27,3 +27,9 @@ We will use the python searchtweets, tweepy libraries to interact with the Twitt
 ## Organization within the team
 
 We will mostly work together on every part of the project as we all want to learn the most of it.
+
+## Dataset    
+   
+Here are the links to the two new datasets generated using tweepy, a python librairie to use Twitter Api :
+* [list of account that does not longer exist](https://drive.google.com/file/d/1hNJNKgmvu6Ar8sY-YGYmIbi6IPvcJQKv/view?usp=sharing)
+* [recent data of user present in ego_timelines database](https://drive.google.com/file/d/1IGnrCDAH8RnpZm-6HU3jg8nqiANOSBw_/view?usp=sharing)
