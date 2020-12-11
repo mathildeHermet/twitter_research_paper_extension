@@ -11,7 +11,6 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 email_username: mathilde.hermet@epfl.ch #Your email address
 twitter_username: HermetMathilde
 github_username: epfl-ada/ada-2020-project-milestone-p3-p3_kali #Github Username goes here
-facebook_username: mathilde.hermet1 #Facebook Username goes here
 your_name: Kali #Your Name for About
 about_yourself: "We are Mathilde Hermet, Quentin Müller and Aleandro Eccel, 3 students at the EPFL engineering school.
 We are a team of 3 applied data analysts willing to see if we can find a model based on user datas that predicts the future usage." # Brief description about yourself
