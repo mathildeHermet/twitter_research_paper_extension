@@ -12,7 +12,10 @@ legend{
     text-align: center;
 }
 .half_width{
-    width: 100%;
+    width: 50%;
+}
+.quarter_width{
+  width: 25%;
 }
 a{
     text-decoration: none;
