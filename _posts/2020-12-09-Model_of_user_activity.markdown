@@ -5,6 +5,8 @@ date:   2020-12-09 14:44:20 -0500
 author: "Kali group"
 feature: "rrpred.png"
 subtitle: "The second research question raised while working on the paper and its dataset is : 'Can we predict the future activity of an account baised on the user data ?'. We wanted to find if such a model exists and what parameters determines this prediction."
+previous:
+  url: {{ site.baseurl}}/_posts/2020-12-11-Twitter_usage_allong_month.markdown
 ---
 <h4>Abstract</h4>
 <p>
