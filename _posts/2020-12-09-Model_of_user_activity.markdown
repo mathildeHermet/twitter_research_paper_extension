@@ -14,17 +14,17 @@ The goal of this study is to predict the number of tweets a given user will have
 <p>
 First of all, some cross-validation steps were performed. 
 </p>
-<img src="{{ site.baseurl}}/assets/images/CrossValRidge.png" class="u-full-width" />
+<img src="{{ site.baseurl}}/assets/images/CrossValRidge.png" class="half_width" />
 <legend>Cross Validation for Ridge</legend>
-<img src="{{ site.baseurl}}/assets/images/CrossValGBR.png" class="u-full-width" />
+<img src="{{ site.baseurl}}/assets/images/CrossValGBR.png" class="half_width" />
 <legend>Cross Validation for Gradient Boosting</legend>
 <p>
 Those graphs seem to show, in addition to the best hyperparameters for both models, that Gradient Boosting will be outputting better predictions than Ridge.
 </p>
 <p>
-<img src="{{ site.baseurl}}/assets/images/rrpred.png" class="u-full-width" />
+<img src="{{ site.baseurl}}/assets/images/rrpred.png" class="half_width" />
 <legend>Ridge prediction vs Actual data</legend>
-<img src="{{ site.baseurl}}/assets/images/gbrpred.png" class="u-full-width" />
+<img src="{{ site.baseurl}}/assets/images/gbrpred.png" class="half_width" />
 <legend>Gradient Boosting vs Actual data</legend>
 </p>
 <p>
