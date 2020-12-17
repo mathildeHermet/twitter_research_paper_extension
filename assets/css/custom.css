@@ -20,6 +20,10 @@ legend{
 .quarter_width{
   width: 25%;
 }
+p.blockimage{
+    margin-left: auto;
+    margin-right: auto;
+}
 a{
     text-decoration: none;
     color:#222222;
