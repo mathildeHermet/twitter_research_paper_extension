@@ -3,7 +3,7 @@ layout: post
 title:  "Twitter usage allong the months"
 date:   2020-12-10 11:00:00 -0500
 author: "Kali group"
-feature: "histo_ex1_month.png"
+feature: "twitter_monthly_usage.png"
 subtitle: "After reading the paper about testing propositions on twitter usage, we wanted to add the research question 'Is there a pattern of twitter usage allong the year ? '. Is there some months, always the same months, where the usage increases or in contrary where it decreases ? Click this post to see the results"
 ---
 <div>
