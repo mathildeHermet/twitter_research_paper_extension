@@ -8,6 +8,9 @@ h1,h2,h3,h4,h5,h6{
     font-family: 'Lora', serif;
     font-weight: bolder;
 }
+legend{
+  text-align: center
+}
 a{
     text-decoration: none;
     color:#222222;

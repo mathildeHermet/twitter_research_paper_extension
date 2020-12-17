@@ -3,7 +3,7 @@ layout: post
 title:  "Find a model that fits user activity to predict account future"
 date:   2020-12-09 14:44:20 -0500
 author: "Kali group"
-feature: "2nd-plot-exemple-usage-prediction.png"
+feature: "rrpred.png"
 subtitle: "The second research question raised while working on the paper and its dataset is : 'Can we predict the future activity of an account baised on the user data ?'. We wanted to find if such a model exists and what parameters determines this prediction."
 ---
 <h4>Abstract</h4>
