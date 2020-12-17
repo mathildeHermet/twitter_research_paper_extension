@@ -21,8 +21,36 @@ subtitle: "After reading the paper about testing propositions on twitter usage, 
                 </p>
                 <legend>Twitter user activity over the months in 2011</legend>
             </div>
-            <div class="grid-child two" id="one">
+            <div class="grid-child two">
+                <p class="blocktext">
                  As those three graphs are showing us, there exists only few similarities between the years : January, February and March are always at the end, while the rest of the months do not seem to follow a defined pattern. This might be explained in different ways : One hypothesis, the craziness of the December’s holidays is over, the people are slowing down, resting, thus posting less on social medias.
+                 </p>
+            </div>
+        </div>
+        <div class="grid-container">
+            <div class="grid-child one">
+                <p class="blocktext">
+                 Another one is that content creator take their vacations at this time of the year, indeed many advertisers pay a lot for their ad in December and thus way less at the start of the year, which means that content creators are often creating less at the start of the year, this same people will often generate a lot of interaction on social media when posting new things. People following them would then post less as they would not have as much topics to talk about.
+                 </p>
+            </div>
+            <div class="grid-child two">
+                <p class="blockimage">
+                <img src="{{ site.baseurl}}/assets/images/month2012.png" class="full_width" />
+                </p>
+                <legend>Twitter user activity over the months in 2012</legend>
+            </div>
+        </div>
+        <div class="grid-container">
+            <div class="grid-child one">
+                <p class="blockimage">
+                <img src="{{ site.baseurl}}/assets/images/month2013.png" class="full_width" />
+                </p>
+                <legend>Twitter user activity over the months in 2013</legend>
+            </div>
+            <div class="grid-child two">
+                <p class="blocktext">
+                 Now, about the other months, there seems to be a different case for each year, this might be explained by different events which create a lot of discussion/post, such as the US election in late 2011 or the UEFA EURO in June/July of 2012. This means, that every year will not behave in the same way, as predictable or unpredictable events are happening at various period in time. We could for example imagine that the data for the year 2020 would be significant around March/April because of COVID and around October/November because of the US election one more time.
+                 </p>
             </div>
         </div>
 </div>
