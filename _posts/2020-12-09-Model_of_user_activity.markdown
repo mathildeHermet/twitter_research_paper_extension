@@ -6,22 +6,33 @@ author: "Kali group"
 feature: "2nd-plot-exemple-usage-prediction.png"
 subtitle: "The second research question raised while working on the paper and its dataset is : 'Can we predict the future activity of an account baised on the user data ?'. We wanted to find if such a model exists and what parameters determines this prediction."
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+<h4>Abstract</h4>
+<p>
+The goal of this study is to predict the number of tweets a given user will have made in the present based on the data from the original paper, meaning data from 2014, and some data of 2020 such as its new followers’ count. We will try to use two model to perform the predictions : Ridge regression and Gradient boosting regression. 
+</p>
+<h4>Results</h4>
+<p>
+First of all, some cross-validation steps were performed. 
+</p>
+<img src="{{ site.baseurl}}/assets/images/CrossValRidge.png" class="u-full-width" />
+<legend>Cross Validation for Ridge</legend>
+<img src="{{ site.baseurl}}/assets/images/CrossValGBR.png" class="u-full-width" />
+<legend>Cross Validation for Gradient Boosting</legend>
+<p>
+<p>
+Those graphs seem to show, in addition to the best hyperparameters for both models, that Gradient Boosting will be outputting better predictions than Ridge.
+</p>
+</p>
+<img src="{{ site.baseurl}}/assets/images/rrpred.png" class="u-full-width" />
+<legend>Ridge prediction vs Actual data</legend>
+<img src="{{ site.baseurl}}/assets/images/gbrpred.png" class="u-full-width" />
+<legend>Gradient Boosting vs Actual data</legend>
+<p>
+<h4>Analysis</h4>
+<p>
+In reality, both these methods seem to give quite poor results. First of all, each model has a tendency to find some negative values, Gradient Boosting more than Ridge, which we know is impossible as no users could have a negative number of tweets. A reason this might occur is the existence of a reduction in the number of tweets for some user, in fact some user might have deleted their tweets for whatever reason, meaning that the number of tweets over time is going down. Then, we can clearly see a sort of constant at the start of each graph, with the one of Gradient Boosting being lower even though less visible than the one of Ridge, meaning that the models do not distinguish lower values very well.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+All in all, it is unlikely to be able to predict the number of tweets a user will be making in 6 years based on some old data, because the number of tweets made by an account does not seem to correlate with the number of followers a user has.
 
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+Some idea to perform better would be to have a better history of the account, maybe on a year by year basis instead of a chunk of many year all in one category.
+</p>

@@ -1,4 +1,4 @@
-I"Y<h4>Abstract</h4>
+I"š<h4>Abstract</h4>
 <p>
 This study aim to explore a sample of Twitter user data over multiple years to see whether user activity increase every year in some months and decrease some other. For exemple, is there more user activity in December than in July.
 To so so we used the dataset provided by the authors of the paper we are trying to extend. 
@@ -9,7 +9,7 @@ We based this decision on the fact that about status, twitter api only allowed t
 We measured this activity via the number of tweets posts each months.
 The histogram visualization permits to appreciate the results of this research.
 </p>
-<p><img src="/assets/images/histo_ex1_month.png" class="u-full-width" /></p>
+<p><img src="https://mathildehermet.github.io/twitter_research_paper_extension/assets/images/histo_ex1_month.png" class="u-full-width" /></p>
 <p>
 <legend>Distribution of Twitter user activity over the months for the years 2011, 2012 and 2013</legend>
 <p>
