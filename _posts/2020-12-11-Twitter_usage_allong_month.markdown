@@ -17,12 +17,12 @@ subtitle: "After reading the paper about testing propositions on twitter usage, 
         <div class="grid-container">
             <div class="grid-child one">
                 <p class="blockimage">
-                <img src="{{ site.baseurl}}/assets/images/histo_ex1_month.png" class="half_width" />
+                <img src="{{ site.baseurl}}/assets/images/month2011.png" class="full_width" />
                 </p>
-                <legend>Distribution of Twitter user activity over the months for the years 2011, 2012 and 2013</legend>
+                <legend>Twitter user activity over the months in 2011</legend>
             </div>
             <div class="grid-child two">
-                Regarding this histogram we may conclude that users activity is always high in December, but we cannot status for others like October etc beacause the ratio change every year.bbbbbbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                 As those three graphs are showing us, there exists only few similarities between the years : January, February and March are always at the end, while the rest of the months do not seem to follow a defined pattern. This might be explained in different ways : One hypothesis, the craziness of the December’s holidays is over, the people are slowing down, resting, thus posting less on social medias.
             </div>
         </div>
 </div>

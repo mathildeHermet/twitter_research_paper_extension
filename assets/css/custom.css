@@ -17,6 +17,12 @@ legend{
     margin-right: auto;
     width: 50%;
 }
+.half_width{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
 .quarter_width{
   width: 25%;
 }
