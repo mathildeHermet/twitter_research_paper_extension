@@ -17,8 +17,9 @@ We based this decision on the fact that about status, twitter api only allowed t
 We measured this activity via the number of tweets posts each months.
 The histogram visualization permits to appreciate the results of this research.
 </p>
-<img src="{{ site.baseurl}}/assets/images/histo_ex1_month.png" class="half_width" />
 <p>
+<img src="{{ site.baseurl}}/assets/images/histo_ex1_month.png" class="half_width" />
+</p>
 <legend>Distribution of Twitter user activity over the months for the years 2011, 2012 and 2013</legend>
 <p>
 Regarding this histogram we may conclude that users activity is always high in December, but we cannot status for others like October etc beacause the ratio change every year.
