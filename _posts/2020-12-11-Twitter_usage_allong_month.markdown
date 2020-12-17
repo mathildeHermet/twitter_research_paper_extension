@@ -19,14 +19,16 @@ We measured this activity via the number of tweets posts each months.
 The histogram visualization permits to appreciate the results of this research.
 </p>
 <p>
-<div class="grid-left">
+<div class="grid-container">
+<div class="grid-child one">
 <p class="blockimage">
 <img src="{{ site.baseurl}}/assets/images/histo_ex1_month.png" class="half_width" />
 </p>
 <legend>Distribution of Twitter user activity over the months for the years 2011, 2012 and 2013</legend>
 </div>
-<div class="grid-right">
+<div class="grid-child two">
 Regarding this histogram we may conclude that users activity is always high in December, but we cannot status for others like October etc beacause the ratio change every year.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+</div>
 </div>
 </p>
 </div>
