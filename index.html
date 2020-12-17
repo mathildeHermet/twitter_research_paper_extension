@@ -1,42 +1,31 @@
 ---
+
 layout: page
-description: "a handome Typography"
+description: "Data story"
 ---
 {% for post in paginator.posts %}
-<div class="post-preview">
-  <header class="post-header">
-    <div class="post-title">
-      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </div>
-    <div class="post-subtitle">
-      Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on
-      {{ post.date | date: "%B %-d, %Y" }}
-    </div>
-  </header>
+<div class="data_story_pres">
+  <h2>Data Story</h2>
 
-  <a href="{{ post.url | prepend: site.baseurl }}"><img src="{{ site.baseurl }}/assets/images/{{ post.feature }}"
-      class="half_width" /></a>
+  <h3>Idea</h3>
 
-  {% if post.subtitle %}
-  <article class="pre-article">
-    {{ post.subtitle }}
-  </article>
-  {% endif %}
-  <div class="post-excerpt">
-    <a href="{{ post.url | prepend: site.baseurl }}">Continue Reading &rarr;</a>
-  </div>
-</div>
-{% endfor %}
-<hr>
-{% if paginator.total_pages > 1 %}
-<div class="pager">
-  {% if paginator.previous_page %}
-  <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"
-    class="button u-pull-left">&larr; Newer </a>
-  {% endif %}
-  {% if paginator.next_page %}
-  <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"
-    class="button u-pull-right">Older &rarr;</a>
-  {% endif %}
+  <p>The aim of this project is to extend the paper <i> Generalization and Replication in Computational Social
+      Science</i> from Hai Liang and King-wa Fu.
+    This paper aims to create a sample of Twitter users network and test on it some propositions that comes from
+    other social media research paper.
+    So our extension was to keep this user network created by the research paper authors and to propose two new
+    propositions to test with the sample.
+    These propositions come from some suppositions, some expectations about social media features, that we had in Kali
+    data scientists group.
+    Indeed, we thought naively that :
+  <ul>
+    <li>There is a monthly usage pattern</li>
+    <li>There is a way to predict from its account features if a user will remain on Twitter</li>
+  </ul>
+  </p>
+  <p>
+    <b>Discover on the website results and Dataset used to test these propositions</b>
+  </p>
+
 </div>
 {% endif %}
