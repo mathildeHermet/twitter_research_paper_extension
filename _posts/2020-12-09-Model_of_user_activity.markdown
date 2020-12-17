@@ -6,6 +6,7 @@ author: "Kali group"
 feature: "rrpred.png"
 subtitle: "The second research question raised while working on the paper and its dataset is : 'Can we predict the future activity of an account baised on the user data ?'. We wanted to find if such a model exists and what parameters determines this prediction."
 ---
+<div>
 <h4>Abstract</h4>
 <p>
 The goal of this study is to predict the number of tweets a given user will have made in the present based on the data from the original paper, meaning data from 2014, and some data of 2020 such as its new followers’ count. We will try to use two model to perform the predictions : Ridge regression and Gradient boosting regression. 
@@ -38,3 +39,4 @@ All in all, it is unlikely to be able to predict the number of tweets a user wil
 
 Some idea to perform better would be to have a better history of the account, maybe on a year by year basis instead of a chunk of many year all in one category.
 </p>
+</div>
