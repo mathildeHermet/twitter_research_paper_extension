@@ -13,7 +13,7 @@ legend{
 }
 .half_width{
     display: block;
-    margin-left: auto;
+    margin-left: auto;  
     margin-right: auto;
     width: 50%;
 }
@@ -23,7 +23,7 @@ legend{
   margin-right: auto;
   width: 100%;
 }
-#id {
+#one {
   vertical-align:middle;
 }
 .quarter_width{
