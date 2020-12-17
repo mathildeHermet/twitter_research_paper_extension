@@ -21,7 +21,7 @@ subtitle: "After reading the paper about testing propositions on twitter usage, 
                 </p>
                 <legend>Twitter user activity over the months in 2011</legend>
             </div>
-            <div class="grid-child two">
+            <div class="grid-child two" id="one">
                  As those three graphs are showing us, there exists only few similarities between the years : January, February and March are always at the end, while the rest of the months do not seem to follow a defined pattern. This might be explained in different ways : One hypothesis, the craziness of the December’s holidays is over, the people are slowing down, resting, thus posting less on social medias.
             </div>
         </div>

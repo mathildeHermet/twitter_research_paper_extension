@@ -23,6 +23,9 @@ legend{
   margin-right: auto;
   width: 100%;
 }
+#id {
+  vertical-align:middle;
+}
 .quarter_width{
   width: 25%;
 }
