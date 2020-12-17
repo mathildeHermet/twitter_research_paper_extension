@@ -22,7 +22,7 @@ subtitle: "After reading the paper about testing propositions on twitter usage, 
                 <legend>Distribution of Twitter user activity over the months for the years 2011, 2012 and 2013</legend>
             </div>
             <div class="grid-child two">
-                Regarding this histogram we may conclude that users activity is always high in December, but we cannot status for others like October etc beacause the ratio change every year.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                Regarding this histogram we may conclude that users activity is always high in December, but we cannot status for others like October etc beacause the ratio change every year.bbbbbbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
             </div>
         </div>
 </div>
