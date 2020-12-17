@@ -19,14 +19,14 @@ First of all, some cross-validation steps were performed.
 <img src="{{ site.baseurl}}/assets/images/CrossValGBR.png" class="u-full-width" />
 <legend>Cross Validation for Gradient Boosting</legend>
 <p>
-<p>
 Those graphs seem to show, in addition to the best hyperparameters for both models, that Gradient Boosting will be outputting better predictions than Ridge.
 </p>
-</p>
+<p>
 <img src="{{ site.baseurl}}/assets/images/rrpred.png" class="u-full-width" />
 <legend>Ridge prediction vs Actual data</legend>
 <img src="{{ site.baseurl}}/assets/images/gbrpred.png" class="u-full-width" />
 <legend>Gradient Boosting vs Actual data</legend>
+</p>
 <p>
 <h4>Analysis</h4>
 <p>
