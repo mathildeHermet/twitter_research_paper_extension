@@ -9,7 +9,7 @@ description: "Data story"
 
   <p>The aim of this project is to extend the paper <i> Generalization and Replication in Computational Social
       Science</i> from Hai Liang and King-wa Fu.
-    This paper managed to create a representative random sample of Twitter users account and tested some propositions that comes from
+    This paper managed to create a representative random sample of Twitter accounts and tested some propositions that come from
     other social media research paper.
     Our extension was to keep this network created by the research paper authors and propose two new
     propositions to test with the sample.
@@ -18,14 +18,14 @@ description: "Data story"
     Indeed, we thought naively that :
   <ul>
     <li>There is a monthly usage pattern (certainly people post more during holidays/celebrations!) </li>
-    <li>There is a way to predict a user's future activity based on his number of followers, the number of posts </li>
+    <li>There is a way to predict a user's future activity based on his number of followers, followees, the number of posts, etc... </li>
   </ul>
   </p>
   <p>
     <div>
       <h3>Monthly Rhythms</h3>
       <p class="blocktext">
-      Let's first look at how much do people posts during a year.
+      Let's first look at how much do people post during a year.
       </p>
           <div class="grid-container">
               <div class="grid-child one">
@@ -37,7 +37,8 @@ description: "Data story"
                   <p class="blocktext">
                    As those three graphs show us, there exists only few similarities between the years :  in January, February and March, users tend to always post fewer tweets while the rest
                   of the months do not seem to follow a defined pattern. We come up with two possible explanations:
-                  First of all, the end of year’s holidays are over and people tend to rest or go on vacation (mainly in swiss ski stations we hope), therefore having less time to post on Twitter. 
+                  First of all, the end of year’s holidays are over and people tend to rest or go on vacation (mainly in swiss ski stations we hope), therefore leaving
+                  social media out of their lives. 
   
                    </p>
               </div>
@@ -67,7 +68,7 @@ description: "Data story"
               </div>
               <div class="grid-child two">
                   <p class="blocktext">
-                   Now, if we take a look at the other months, we can not really point out a month that is always bigger than the others or distinguish any pattern. 
+                  If we take a look at the other months, we can not really point out a month that is always bigger than the others or distinguish any pattern. 
                    This might be explained by different events which create a lot of discussion/post,
                    such as the US election in late 2011 or the <a href="https://en.wikipedia.org/wiki/UEFA_Euro_2012" style="text-decoration-line: underline;">UEFA EURO in June 2012</a>.
                    Furthermore, the distribution  appears to become more uniform as the user database grows. Indeed we see that overall, the number of tweets increased by 550%
@@ -133,8 +134,8 @@ description: "Data story"
     <p>
     Those graphs seem to show, in addition to the best hyperparameters for both models, that Gradient Boosting manages to explain slightly better the data compared to
     Ridge Regression.
-    We see that Ridge Regression performs very poorly unless the alpha parameter is in the order of 10<sup>10</sup> Gradient Boosting however doesn't change much on based on
-    the learning rate for the best model.
+    We see that Ridge Regression performs very poorly unless the alpha parameter is in the order of 10<sup>10</sup>. Gradient Boosting on the other hand doesn't change much based on
+    the learning rate if we consider the best model.
     </p>
     <h4>Test our best models</h4>
     <p>
