@@ -1,4 +1,4 @@
-I"#	<div>
+I"<div>
 <h4>Abstract</h4>
 <p>
 The goal of this study is to predict the number of tweets a given user will have made in the present based on the data from the original paper, meaning data from 2014, and some data of 2020 such as its new followers’ count. We will try to use two model to perform the predictions : Ridge regression and Gradient boosting regression. 
@@ -8,18 +8,18 @@ The goal of this study is to predict the number of tweets a given user will have
 First of all, some cross-validation steps were performed. 
 </p>
 <p>
-<img src="https://mathildehermet.github.io/twitter_research_paper_extension/assets/images/CrossValRidge.png" class="half_width" />
+<img src="/assets/images/CrossValRidge.png" class="half_width" />
 <legend>Cross Validation for Ridge</legend>
-<img src="https://mathildehermet.github.io/twitter_research_paper_extension/assets/images/CrossValGBR.png" class="half_width" />
+<img src="/assets/images/CrossValGBR.png" class="half_width" />
 <legend>Cross Validation for Gradient Boosting</legend>
 </p>
 <p>
 Those graphs seem to show, in addition to the best hyperparameters for both models, that Gradient Boosting will be outputting better predictions than Ridge.
 </p>
 <p>
-<img src="https://mathildehermet.github.io/twitter_research_paper_extension/assets/images/rrpred.png" class="half_width" />
+<img src="/assets/images/rrpred.png" class="half_width" />
 <legend>Ridge prediction vs Actual data</legend>
-<img src="https://mathildehermet.github.io/twitter_research_paper_extension/assets/images/gbrpred.png" class="half_width" />
+<img src="/assets/images/gbrpred.png" class="half_width" />
 <legend>Gradient Boosting vs Actual data</legend>
 </p>
 <p>

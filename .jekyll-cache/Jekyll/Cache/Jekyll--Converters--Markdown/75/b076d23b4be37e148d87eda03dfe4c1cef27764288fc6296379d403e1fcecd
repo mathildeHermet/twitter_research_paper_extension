@@ -1,4 +1,4 @@
-I"8<div>
+I"u<div>
     <h4>Abstract</h4>
         <p>
         This study aim to explore a sample of Twitter user data over multiple years to see whether user activity increase every year in some months and decrease some other. For exemple, is there more user activity in December than in July.
@@ -9,7 +9,7 @@
         <div class="grid-container">
             <div class="grid-child one">
                 <p class="blockimage">
-                <img src="https://mathildehermet.github.io/twitter_research_paper_extension/assets/images/month2011.png" class="full_width" />
+                <img src="/assets/images/month2011.png" class="full_width" />
                 </p>
             </div>
             <div class="grid-child two">
@@ -28,14 +28,14 @@
             </div>
             <div class="grid-child two">
                 <p class="blockimage">
-                <img src="https://mathildehermet.github.io/twitter_research_paper_extension/assets/images/month2012.png" class="full_width" />
+                <img src="/assets/images/month2012.png" class="full_width" />
                 </p>
             </div>
         </div>
         <div class="grid-container">
             <div class="grid-child one">
                 <p class="blockimage">
-                <img src="https://mathildehermet.github.io/twitter_research_paper_extension/assets/images/month2013.png" class="full_width" />
+                <img src="/assets/images/month2013.png" class="full_width" />
                 </p>
             </div>
             <div class="grid-child two">

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/https://mathildehermet.github.io/twitter_research_paper_extension/feed.xml" rel="self" type="application/atom+xml" /><link href="/https://mathildehermet.github.io/twitter_research_paper_extension/" rel="alternate" type="text/html" /><updated>2020-12-18T12:49:55+01:00</updated><id>/https://mathildehermet.github.io/twitter_research_paper_extension/feed.xml</id><title type="html">Twitter usage study</title><subtitle>small description about you will take you long</subtitle><entry><title type="html">Twitter usage allong the months</title><link href="/https://mathildehermet.github.io/twitter_research_paper_extension/2020/12/10/Twitter_usage_allong_month.html" rel="alternate" type="text/html" title="Twitter usage allong the months" /><published>2020-12-10T17:00:00+01:00</published><updated>2020-12-10T17:00:00+01:00</updated><id>/https://mathildehermet.github.io/twitter_research_paper_extension/2020/12/10/Twitter_usage_allong_month</id><content type="html" xml:base="/https://mathildehermet.github.io/twitter_research_paper_extension/2020/12/10/Twitter_usage_allong_month.html">&lt;div&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-12-18T13:18:40+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Twitter usage study</title><subtitle>small description about you will take you long</subtitle><entry><title type="html">Twitter usage allong the months</title><link href="http://localhost:4000/2020/12/10/Twitter_usage_allong_month.html" rel="alternate" type="text/html" title="Twitter usage allong the months" /><published>2020-12-10T17:00:00+01:00</published><updated>2020-12-10T17:00:00+01:00</updated><id>http://localhost:4000/2020/12/10/Twitter_usage_allong_month</id><content type="html" xml:base="http://localhost:4000/2020/12/10/Twitter_usage_allong_month.html">&lt;div&gt;
     &lt;h4&gt;Abstract&lt;/h4&gt;
         &lt;p&gt;
         This study aim to explore a sample of Twitter user data over multiple years to see whether user activity increase every year in some months and decrease some other. For exemple, is there more user activity in December than in July.
@@ -9,7 +9,7 @@
         &lt;div class=&quot;grid-container&quot;&gt;
             &lt;div class=&quot;grid-child one&quot;&gt;
                 &lt;p class=&quot;blockimage&quot;&gt;
-                &lt;img src=&quot;https://mathildehermet.github.io/twitter_research_paper_extension/assets/images/month2011.png&quot; class=&quot;full_width&quot; /&gt;
+                &lt;img src=&quot;/assets/images/month2011.png&quot; class=&quot;full_width&quot; /&gt;
                 &lt;/p&gt;
             &lt;/div&gt;
             &lt;div class=&quot;grid-child two&quot;&gt;
@@ -28,14 +28,14 @@
             &lt;/div&gt;
             &lt;div class=&quot;grid-child two&quot;&gt;
                 &lt;p class=&quot;blockimage&quot;&gt;
-                &lt;img src=&quot;https://mathildehermet.github.io/twitter_research_paper_extension/assets/images/month2012.png&quot; class=&quot;full_width&quot; /&gt;
+                &lt;img src=&quot;/assets/images/month2012.png&quot; class=&quot;full_width&quot; /&gt;
                 &lt;/p&gt;
             &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;grid-container&quot;&gt;
             &lt;div class=&quot;grid-child one&quot;&gt;
                 &lt;p class=&quot;blockimage&quot;&gt;
-                &lt;img src=&quot;https://mathildehermet.github.io/twitter_research_paper_extension/assets/images/month2013.png&quot; class=&quot;full_width&quot; /&gt;
+                &lt;img src=&quot;/assets/images/month2013.png&quot; class=&quot;full_width&quot; /&gt;
                 &lt;/p&gt;
             &lt;/div&gt;
             &lt;div class=&quot;grid-child two&quot;&gt;
@@ -45,7 +45,7 @@
                  &lt;/p&gt;
             &lt;/div&gt;
         &lt;/div&gt;
-&lt;/div&gt;</content><author><name>Kali group</name></author><summary type="html">Abstract This study aim to explore a sample of Twitter user data over multiple years to see whether user activity increase every year in some months and decrease some other. For exemple, is there more user activity in December than in July. To so so we used the dataset provided by the authors of the paper we are trying to extend. We based this decision on the fact that about status, twitter api only allowed to grab recent tweets, and that the way of sampling realized in this paper is interesting and we did not wanted to denaturate it. Results Twitter user activity over the months in 2011 As those three graphs are showing us, there exists only few similarities between the years : January, February and March are always at the end, while the rest of the months do not seem to follow a defined pattern. This might be explained in different ways : One hypothesis, the craziness of the December’s holidays is over, the people are slowing down, resting, thus posting less on social medias. Twitter user activity over the months in 2012 Another one is that content creator take their vacations at this time of the year, indeed many advertisers pay a lot for their ad in December and thus way less at the start of the year, which means that content creators are often creating less at the start of the year, this same people will often generate a lot of interaction on social media when posting new things. People following them would then post less as they would not have as much topics to talk about. Twitter user activity over the months in 2013 Now, about the other months, there seems to be a different case for each year, this might be explained by different events which create a lot of discussion/post, such as the US election in late 2011 or the UEFA EURO in June/July of 2012. This means, that every year will not behave in the same way, as predictable or unpredictable events are happening at various period in time. We could for example imagine that the data for the year 2020 would be significant around March/April because of COVID and around October/November because of the US election one more time.</summary></entry><entry><title type="html">Find a model that fits user activity to predict account future</title><link href="/https://mathildehermet.github.io/twitter_research_paper_extension/2020/12/09/Model_of_user_activity.html" rel="alternate" type="text/html" title="Find a model that fits user activity to predict account future" /><published>2020-12-09T20:44:20+01:00</published><updated>2020-12-09T20:44:20+01:00</updated><id>/https://mathildehermet.github.io/twitter_research_paper_extension/2020/12/09/Model_of_user_activity</id><content type="html" xml:base="/https://mathildehermet.github.io/twitter_research_paper_extension/2020/12/09/Model_of_user_activity.html">&lt;div&gt;
+&lt;/div&gt;</content><author><name>Kali group</name></author><summary type="html">Abstract This study aim to explore a sample of Twitter user data over multiple years to see whether user activity increase every year in some months and decrease some other. For exemple, is there more user activity in December than in July. To so so we used the dataset provided by the authors of the paper we are trying to extend. We based this decision on the fact that about status, twitter api only allowed to grab recent tweets, and that the way of sampling realized in this paper is interesting and we did not wanted to denaturate it. Results Twitter user activity over the months in 2011 As those three graphs are showing us, there exists only few similarities between the years : January, February and March are always at the end, while the rest of the months do not seem to follow a defined pattern. This might be explained in different ways : One hypothesis, the craziness of the December’s holidays is over, the people are slowing down, resting, thus posting less on social medias. Twitter user activity over the months in 2012 Another one is that content creator take their vacations at this time of the year, indeed many advertisers pay a lot for their ad in December and thus way less at the start of the year, which means that content creators are often creating less at the start of the year, this same people will often generate a lot of interaction on social media when posting new things. People following them would then post less as they would not have as much topics to talk about. Twitter user activity over the months in 2013 Now, about the other months, there seems to be a different case for each year, this might be explained by different events which create a lot of discussion/post, such as the US election in late 2011 or the UEFA EURO in June/July of 2012. This means, that every year will not behave in the same way, as predictable or unpredictable events are happening at various period in time. We could for example imagine that the data for the year 2020 would be significant around March/April because of COVID and around October/November because of the US election one more time.</summary></entry><entry><title type="html">Find a model that fits user activity to predict account future</title><link href="http://localhost:4000/2020/12/09/Model_of_user_activity.html" rel="alternate" type="text/html" title="Find a model that fits user activity to predict account future" /><published>2020-12-09T20:44:20+01:00</published><updated>2020-12-09T20:44:20+01:00</updated><id>http://localhost:4000/2020/12/09/Model_of_user_activity</id><content type="html" xml:base="http://localhost:4000/2020/12/09/Model_of_user_activity.html">&lt;div&gt;
 &lt;h4&gt;Abstract&lt;/h4&gt;
 &lt;p&gt;
 The goal of this study is to predict the number of tweets a given user will have made in the present based on the data from the original paper, meaning data from 2014, and some data of 2020 such as its new followers’ count. We will try to use two model to perform the predictions : Ridge regression and Gradient boosting regression. 
@@ -55,18 +55,18 @@ The goal of this study is to predict the number of tweets a given user will have
 First of all, some cross-validation steps were performed. 
 &lt;/p&gt;
 &lt;p&gt;
-&lt;img src=&quot;https://mathildehermet.github.io/twitter_research_paper_extension/assets/images/CrossValRidge.png&quot; class=&quot;half_width&quot; /&gt;
+&lt;img src=&quot;/assets/images/CrossValRidge.png&quot; class=&quot;half_width&quot; /&gt;
 &lt;legend&gt;Cross Validation for Ridge&lt;/legend&gt;
-&lt;img src=&quot;https://mathildehermet.github.io/twitter_research_paper_extension/assets/images/CrossValGBR.png&quot; class=&quot;half_width&quot; /&gt;
+&lt;img src=&quot;/assets/images/CrossValGBR.png&quot; class=&quot;half_width&quot; /&gt;
 &lt;legend&gt;Cross Validation for Gradient Boosting&lt;/legend&gt;
 &lt;/p&gt;
 &lt;p&gt;
 Those graphs seem to show, in addition to the best hyperparameters for both models, that Gradient Boosting will be outputting better predictions than Ridge.
 &lt;/p&gt;
 &lt;p&gt;
-&lt;img src=&quot;https://mathildehermet.github.io/twitter_research_paper_extension/assets/images/rrpred.png&quot; class=&quot;half_width&quot; /&gt;
+&lt;img src=&quot;/assets/images/rrpred.png&quot; class=&quot;half_width&quot; /&gt;
 &lt;legend&gt;Ridge prediction vs Actual data&lt;/legend&gt;
-&lt;img src=&quot;https://mathildehermet.github.io/twitter_research_paper_extension/assets/images/gbrpred.png&quot; class=&quot;half_width&quot; /&gt;
+&lt;img src=&quot;/assets/images/gbrpred.png&quot; class=&quot;half_width&quot; /&gt;
 &lt;legend&gt;Gradient Boosting vs Actual data&lt;/legend&gt;
 &lt;/p&gt;
 &lt;p&gt;

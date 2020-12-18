@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="small description about you will take you long">
     <title>Twitter usage study</title>
-    <link rel="stylesheet" href="https://mathildehermet.github.io/twitter_research_paper_extension/assets/css/normalize.css">
-    <link rel="stylesheet" href="https://mathildehermet.github.io/twitter_research_paper_extension/assets/css/skeleton.css">
-    <link rel="stylesheet" href="https://mathildehermet.github.io/twitter_research_paper_extension/assets/css/custom.css">
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="/assets/css/skeleton.css">
+    <link rel="stylesheet" href="/assets/css/custom.css">
 </head>
 
 
@@ -21,7 +21,7 @@
       <div class="twelve columns">
         <div class="site-branding">
           <div class="site-title">
-            <a href="https://mathildehermet.github.io/twitter_research_paper_extension/">
+            <a href="/">
               <h1>Twitter usage study</h1>
             </a>
           </div>
@@ -32,25 +32,25 @@
         <nav class="navbar">
           <div class="container">
             <ul class="navbar-list">
-              <li class="navbar-item"><a class="navbar-link" href="https://mathildehermet.github.io/twitter_research_paper_extension/">Home</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="/">Home</a></li>
               
               
               
               
               <li class="navbar-item">
-                <a class="navbar-link" href="https://mathildehermet.github.io/twitter_research_paper_extension/Dataset.html">Dataset</a>
+                <a class="navbar-link" href="/Dataset.html">Dataset</a>
               </li>
               
               
               
               <li class="navbar-item">
-                <a class="navbar-link" href="https://mathildehermet.github.io/twitter_research_paper_extension/Results.html">Results show case</a>
+                <a class="navbar-link" href="/Results.html">Results show case</a>
               </li>
               
               
               
               <li class="navbar-item">
-                <a class="navbar-link" href="https://mathildehermet.github.io/twitter_research_paper_extension/typography.html">Typography</a>
+                <a class="navbar-link" href="/typography.html">Typography</a>
               </li>
               
               
@@ -96,7 +96,7 @@
           <div class="grid-container">
               <div class="grid-child one">
                   <p class="blockimage">
-                  <img src="https://mathildehermet.github.io/twitter_research_paper_extension/assets/images/month2011.png" class="full_width" />
+                  <img src="/assets/images/month2011.png" class="full_width" />
                   </p>
               </div>
               <div class="grid-child two">
@@ -121,14 +121,14 @@
               </div>
               <div class="grid-child two">
                   <p class="blockimage">
-                  <img src="https://mathildehermet.github.io/twitter_research_paper_extension/assets/images/month2012.png" class="full_width" />
+                  <img src="/assets/images/month2012.png" class="full_width" />
                   </p>
               </div>
           </div>
           <div class="grid-container">
               <div class="grid-child one">
                   <p class="blockimage">
-                  <img src="https://mathildehermet.github.io/twitter_research_paper_extension/assets/images/month2013.png" class="full_width" />
+                  <img src="/assets/images/month2013.png" class="full_width" />
                   </p>
               </div>
               <div class="grid-child two">
@@ -136,24 +136,24 @@
                    Now, about the other months, there seems to be a different case for each year, this might be explained by different events which create a lot of discussion/post,
                   such as the US election in late 2011 or the <a href="https://en.wikipedia.org/wiki/UEFA_Euro_2012" style="text-decoration-line: underline;">UEFA EURO in June 2012</a>. 
                   Looking at the number of tweets made in 2012 by Spanish speakers, who are huge football fans and followed the adventure of their team from start to finish,
-                  a clear spike appears on June compared to the other years. 
+                  a clear spike appears on June compared to the other years.
                    </p>
               </div>
           </div>
   </div>
   </p>
   <p class="images">
-    <div class="row">
-      <div class="col-sm-4">
-          <img src="https://mathildehermet.github.io/twitter_research_paper_extension/assets/images/month2011.png" class="img-responsive text-center"/>
+    <div class="grid-container">
+      <div class="grid-child one">
+          <img src="/assets/images/spanishmonth2011.png" />
       </div>
       
-      <div class="col-sm-4">
-        <img src="https://mathildehermet.github.io/twitter_research_paper_extension/assets/images/month2012.png" class="img-responsive text-center" />
+      <div class="grid-child two">
+        <img src="/assets/images/spanishmonth2012.png"  />
       </div>
 
-      <div class="col-sm-4">
-        <img src="https://mathildehermet.github.io/twitter_research_paper_extension/assets/images/month2013.png" class="img-responsive text-center" />
+      <div class="grid-child three">
+        <img src="/assets/images/spanishmonth2013.png" />
       </div>
   </div>
   </p>
@@ -163,6 +163,41 @@
     predictable or unpredictable events. We could for example imagine that the number of tweets for the year 2020 would explode around
     March/April because of COVID and around October/November because of this historic US election, having a president that tweets a lot.
   </p>
+
+  <h5>How much will a user tweet?</h5>
+  <p>
+    Can we predict how much a user will post in 2020, knowing how many followers, followees he has and how those features evolved since 2014. Of course not! 
+    But we still tried just to prove that human behaviour is highly unpredictable.
+  </p>
+  <div>
+    <h4>Results</h4>
+    <p>
+    First of all, some cross-validation steps were performed. 
+    </p>
+    <p>
+    <img src="/assets/images/CrossValRidge.png" class="half_width" />
+    <legend>Cross Validation for Ridge</legend>
+    <img src="/assets/images/CrossValGBR.png" class="half_width" />
+    <legend>Cross Validation for Gradient Boosting</legend>
+    </p>
+    <p>
+    Those graphs seem to show, in addition to the best hyperparameters for both models, that Gradient Boosting will be outputting better predictions than Ridge.
+    </p>
+    <p>
+    <img src="/assets/images/rrpred.png" class="half_width" />
+    <legend>Ridge prediction vs Actual data</legend>
+    <img src="/assets/images/gbrpred.png" class="half_width" />
+    <legend>Gradient Boosting vs Actual data</legend>
+    </p>
+    <p>
+    <h4>Analysis</h4>
+    <p>
+    In reality, both these methods seem to give quite poor results. First of all, each model has a tendency to find some negative values, Gradient Boosting more than Ridge, which we know is impossible as no users could have a negative number of tweets. A reason this might occur is the existence of a reduction in the number of tweets for some user, in fact some user might have deleted their tweets for whatever reason, meaning that the number of tweets over time is going down. Then, we can clearly see a sort of constant at the start of each graph, with the one of Gradient Boosting being lower even though less visible than the one of Ridge, meaning that the models do not distinguish lower values very well.
+    All in all, it is unlikely to be able to predict the number of tweets a user will be making in 6 years based on some old data, because the number of tweets made by an account does not seem to correlate with the number of followers a user has.
+    
+    Some idea to perform better would be to have a better history of the account, maybe on a year by year basis instead of a chunk of many year all in one category.
+    </p>
+    </div>
 
 </div>
 		</div>
@@ -178,7 +213,7 @@
         <div class="about">
           <h3>About</h3>
           <div class="profile ">
-            <img src="https://mathildehermet.github.io/twitter_research_paper_extension/assets/images/epfl.jpg" class="quarter_width" />
+            <img src="/assets/images/epfl.jpg" class="quarter_width" />
           </div>
           <div class="about-title">
             Kali
