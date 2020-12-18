@@ -42,18 +42,6 @@
               </li>
               
               
-              
-              <li class="navbar-item">
-                <a class="navbar-link" href="/Results.html">Results show case</a>
-              </li>
-              
-              
-              
-              <li class="navbar-item">
-                <a class="navbar-link" href="/typography.html">Typography</a>
-              </li>
-              
-              
             </ul>
           </div>
         </nav>
@@ -217,12 +205,71 @@
       </div>
     </p>
     <p>
-    Okay. That is a bit embarassing. Both methods seem to give quite poor results.  
-    In reality, both these methods seem to give quite poor results. First of all, each model has a tendency to find some negative values, Gradient Boosting more than Ridge, which we know is impossible as no users could have a negative number of tweets. A reason this might occur is the existence of a reduction in the number of tweets for some user, in fact some user might have deleted their tweets for whatever reason, meaning that the number of tweets over time is going down. Then, we can clearly see a sort of constant at the start of each graph, with the one of Gradient Boosting being lower even though less visible than the one of Ridge, meaning that the models do not distinguish lower values very well.
-    All in all, it is unlikely to be able to predict the number of tweets a user will be making in 6 years based on some old data, because the number of tweets made by an account does not seem to correlate with the number of followers a user has.
-    
-    Some idea to perform better would be to have a better history of the account, maybe on a year by year basis instead of a chunk of many year all in one category.
+    Both methods seem to give quite poor results. We can clearly see a sort of constant at the start of each graph, 
+    with the one of Gradient Boosting being lower than the one of Ridge, meaning that the models do not distinguish lower values very well. Observe that these plots were
+    made in logscale, although Gradient Boosting seem visually to more fit the data, in reality it predicts far from the real values. We could also note that 
+    some predictions were negative, which is clearly impossible. A possible explanation is that some users can delete their tweets, or were censored by Twitter, 
+    thus making their counts lower in 2020 compared to 2014. We thus checked if we had users that have less tweets in 2020 compared to 2014:
     </p>
+
+    <div class="grid-container">
+      <div class="grid-child one">
+          <img src="/assets/images/DiffTweets.png" />
+      </div>
+      <p class="blocktext">
+        <br>
+        <br>
+        <br>
+        We didn't expect that much censorship. We even have that one user lost over 10'000 tweets. We can therefore ask ourselves if Donald Trump is in our dataset. Joke aside,
+        we need to remove these users because the model will think that they produced a negative amount of tweets, which is impossible.
+        </p>
+    </div>
+    </p>
+    <h4>Second attempt at succeeding</h4>
+    <p>
+      Armed with a well-defined dataset, we retry the above steps. We however only try this on Ridge Regression as it yield better result in the first attempt.
+    </p>
+    <p class="images">
+      <div class="grid-container">
+        <div class="grid-child one">
+            <img src="/assets/images/CrossValRidgePos1.png" />
+        </div>
+        
+        <div class="grid-child two">
+          <img src="/assets/images/CrossValRidgePos.png"  />
+        </div>
+      </div>
+    <p>
+      We also tried to make features extension to improve the results of our model. We see that for degree 2, we suddenly have a better R<sup>2</sup> for 10<sup>9</sup>.
+      The other models seem to always overfit and perform thus very badly.
+    </p>
+
+
+    <h4>Test our new best models</h4>
+    <p>
+      Now, that we have new best models, we can test them once again on the test set:
+    </p>
+    <p class="images">
+      <div class="grid-container">
+        <div class="grid-child one">
+            <img src="/assets/images/rrpred_pos.png" />
+        </div>
+        
+        <div class="grid-child two">
+          <img src="/assets/images/rrpred_pos_deg.png"  />
+        </div>
+      </div>
+    </p>
+    <p>
+    Both methods still perform really badly. Even though we got rid of the negative values, we still have negative predictions for the model on the right. We again
+    have that there is a sort of constant line in both approaches. The standard Ridge Regression
+    without features augmentation did not perform a lot better than previously. It seems that those models are too simplistic to predict the number of tweets someone
+    will post in the future.
+    </p>
+    <h3>Conclusion</h3>
+    <p>We first showed that there seem to be no relation between the month of the year, and the amount of tweets humans produce. Most likely, people will tweet about predictable or
+      unpredictable events that affect them in any manner. For the second part, we can conclude that simplistic models can not perform well on such a complicated task. We also
+      accuse the fact that data from 2014 has little to nothing to do with data from 2020 as internet tends to evolve quickly.</p>
 </div>
 		</div>
 	</div>

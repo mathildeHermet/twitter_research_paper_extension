@@ -42,18 +42,6 @@
               </li>
               
               
-              
-              <li class="navbar-item">
-                <a class="navbar-link" href="/Results.html">Results show case</a>
-              </li>
-              
-              
-              
-              <li class="navbar-item">
-                <a class="navbar-link" href="/typography.html">Typography</a>
-              </li>
-              
-              
             </ul>
           </div>
         </nav>
@@ -71,17 +59,26 @@
 
 <h3>What we used that already exist</h3>
 
-<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+<p>The paper authors provided the dataset they used to test the 10 propositions.
+    Among the 3 datasets, we used only the <a
+        href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/L1MJZ6">ego timelines
+        dataset</a>.
+    This dataset contains tweet and associated user information such as creation daate of the tweet, user id associated,
+    tweet id, hastags, urls retweeted etc.
+    This data set was enough to test the assumption made about Twitter usage evolution over month, yet for the
+    prediction case,
+    we needed to have recent information on the user account to know if the given user decided whether he remains on
+    twitter or not.
 </p>
 
-<h3>What we consitute that already exist</h3>
+<h3>Extension of the Dataset</h3>
 
-<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+<p>
+    We needed recent data about the users contained in the ego timelines dataset. By creating tweeter developper
+    account, we were able to constitute a new dataset using the Twitter api.
+    We used the python librairy tweepy and stored the result in a csv file. We requested user data by doing request on
+    userid, and in case the user was not present anymore, we supposed the account was deleted and so we create another
+    dataset to store the ID of the user unreachable.
 </p>
 		</div>
 	</div>
