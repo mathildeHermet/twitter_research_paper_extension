@@ -88,8 +88,7 @@
   </p>
   <p>
     <div>
-      <h4>Results</h4>
-      <h5>Monthly Rhythms</h5>
+      <h3>Monthly Rhythms</h3>
       <p class="blocktext">
       Let's first look at how much do people posts during a year.
       </p>
@@ -133,72 +132,97 @@
               </div>
               <div class="grid-child two">
                   <p class="blocktext">
-                   Now, about the other months, there seems to be a different case for each year, this might be explained by different events which create a lot of discussion/post,
-                  such as the US election in late 2011 or the <a href="https://en.wikipedia.org/wiki/UEFA_Euro_2012" style="text-decoration-line: underline;">UEFA EURO in June 2012</a>. 
-                  Looking at the number of tweets made in 2012 by Spanish speakers, who are huge football fans and followed the adventure of their team from start to finish,
-                  a clear spike appears on June compared to the other years.
+                   Now, if we take a look at the other months, we can not really point out a month that is always bigger than the others or distinguish any pattern. 
+                   This might be explained by different events which create a lot of discussion/post,
+                   such as the US election in late 2011 or the <a href="https://en.wikipedia.org/wiki/UEFA_Euro_2012" style="text-decoration-line: underline;">UEFA EURO in June 2012</a>.
+                   Furthermore, the distribution  appears to become more uniform as the user database grows. Indeed we see that overall, the number of tweets increased by 550%
+                   from 2011 to 2013.
+                   
                    </p>
               </div>
           </div>
   </div>
   </p>
+  <p>We thus wanted to check if events had a real influence on how people tweet. We take the example of the Euro. <br> 
+    Looking at the number of tweets made in 2012 by Spanish speakers, who are huge football fans and followed the adventure of their team from start to finish,
+    a clear spike appears in June compared to the other years.
+    </p>
+
   <p class="images">
     <div class="grid-container">
       <div class="grid-child one">
-          <img src="/assets/images/spanishmonth2011.png" />
+          <img src="/assets/images/spanish2011.png" />
       </div>
       
       <div class="grid-child two">
-        <img src="/assets/images/spanishmonth2012.png"  />
+        <img src="/assets/images/spanish2012.png"  />
       </div>
 
       <div class="grid-child three">
-        <img src="/assets/images/spanishmonth2013.png" />
+        <img src="/assets/images/spanish2013.png" />
+      </div>
+      <div class="grid-child four">
+        <p>
+          This example strengthens the hypothesis that there is no monthly pattern. It's a lot more probable that the number of tweets is correlated to 
+          what happens during the year, thus being highly influenced by predictable or unpredictable events.
+          We could for example imagine that the number of tweets for the year 2020 would explode around
+          March/April because of COVID and around October/November because of this historic US election, having a president that tweets a lot.
+        </p>
       </div>
   </div>
   </p>
 
-  <p>
-    This shows that there is no monthly pattern as the number of tweets seems to be correlated to what happens during the year, thus being highly influenced by
-    predictable or unpredictable events. We could for example imagine that the number of tweets for the year 2020 would explode around
-    March/April because of COVID and around October/November because of this historic US election, having a president that tweets a lot.
-  </p>
-
-  <h5>How much will a user tweet?</h5>
+  <h3>How much will a user tweet?</h3>
   <p>
     Can we predict how much a user will post in 2020, knowing how many followers, followees he has and how those features evolved since 2014. Of course not! 
     But we still tried just to prove that human behaviour is highly unpredictable.
   </p>
-  <div>
-    <h4>Results</h4>
+  <h4>Train step</h4>
     <p>
-    First of all, some cross-validation steps were performed. 
+    First of all, we went with a blunt try and kept the data unchanged (Spoiler Alert: didn't work well...). We tried 2 different models to predict those values.
+    One was Ridge Regression, the other was a Gradient Boosting Regression model. <br>
+    As we are conscientious (aspiring) Data Scientists, we first performed some cross-validation on the dataset. We used the R<sup>2</sup> value to choose our hyperparameter. 
+    </p>
+    <p class="images">
+      <div class="grid-container">
+        <div class="grid-child one">
+            <img src="/assets/images/CrossValRidge.png" />
+        </div>
+        
+        <div class="grid-child two">
+          <img src="/assets/images/CrossValGBR.png"  />
+        </div>
+      </div>
+    </p>
+  
+    <p>
+    Those graphs seem to show, in addition to the best hyperparameters for both models, that Gradient Boosting manages to explain slightly better the data compared to
+    Ridge Regression.
+    We see that Ridge Regression performs very poorly unless the alpha parameter is in the order of 10<sup>10</sup> Gradient Boosting however doesn't change much on based on
+    the learning rate for the best model.
+    </p>
+    <h4>Test our best models</h4>
+    <p>
+      Now that we have our prepared our models and found the best hyperparameters, let's test them.
+    </p>
+    <p class="images">
+      <div class="grid-container">
+        <div class="grid-child one">
+            <img src="/assets/images/rrpred.png" />
+        </div>
+        
+        <div class="grid-child two">
+          <img src="/assets/images/gbrpred.png"  />
+        </div>
+      </div>
     </p>
     <p>
-    <img src="/assets/images/CrossValRidge.png" class="half_width" />
-    <legend>Cross Validation for Ridge</legend>
-    <img src="/assets/images/CrossValGBR.png" class="half_width" />
-    <legend>Cross Validation for Gradient Boosting</legend>
-    </p>
-    <p>
-    Those graphs seem to show, in addition to the best hyperparameters for both models, that Gradient Boosting will be outputting better predictions than Ridge.
-    </p>
-    <p>
-    <img src="/assets/images/rrpred.png" class="half_width" />
-    <legend>Ridge prediction vs Actual data</legend>
-    <img src="/assets/images/gbrpred.png" class="half_width" />
-    <legend>Gradient Boosting vs Actual data</legend>
-    </p>
-    <p>
-    <h4>Analysis</h4>
-    <p>
+    Okay. That is a bit embarassing. Both methods seem to give quite poor results.  
     In reality, both these methods seem to give quite poor results. First of all, each model has a tendency to find some negative values, Gradient Boosting more than Ridge, which we know is impossible as no users could have a negative number of tweets. A reason this might occur is the existence of a reduction in the number of tweets for some user, in fact some user might have deleted their tweets for whatever reason, meaning that the number of tweets over time is going down. Then, we can clearly see a sort of constant at the start of each graph, with the one of Gradient Boosting being lower even though less visible than the one of Ridge, meaning that the models do not distinguish lower values very well.
     All in all, it is unlikely to be able to predict the number of tweets a user will be making in 6 years based on some old data, because the number of tweets made by an account does not seem to correlate with the number of followers a user has.
     
     Some idea to perform better would be to have a better history of the account, maybe on a year by year basis instead of a chunk of many year all in one category.
     </p>
-    </div>
-
 </div>
 		</div>
 	</div>
