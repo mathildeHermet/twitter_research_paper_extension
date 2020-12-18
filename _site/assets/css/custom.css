@@ -8,6 +8,39 @@ h1,h2,h3,h4,h5,h6{
     font-family: 'Lora', serif;
     font-weight: bolder;
 }
+legend{
+    text-align: center;
+}
+#home_page_title {
+  text-align: center;
+}
+.half_width{
+    display: block;
+    margin-left: auto;  
+    margin-right: auto;
+    width: 50%;
+}
+.half_width{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+p.blocktext {
+  vertical-align:middle;
+}
+.quarter_width{
+  width: 25%;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+p.blockimage{
+    margin-left: auto;
+    margin-right: auto;
+}
 a{
     text-decoration: none;
     color:#222222;

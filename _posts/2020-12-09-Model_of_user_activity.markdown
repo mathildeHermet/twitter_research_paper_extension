@@ -34,7 +34,6 @@ Those graphs seem to show, in addition to the best hyperparameters for both mode
 <h4>Analysis</h4>
 <p>
 In reality, both these methods seem to give quite poor results. First of all, each model has a tendency to find some negative values, Gradient Boosting more than Ridge, which we know is impossible as no users could have a negative number of tweets. A reason this might occur is the existence of a reduction in the number of tweets for some user, in fact some user might have deleted their tweets for whatever reason, meaning that the number of tweets over time is going down. Then, we can clearly see a sort of constant at the start of each graph, with the one of Gradient Boosting being lower even though less visible than the one of Ridge, meaning that the models do not distinguish lower values very well.
-
 All in all, it is unlikely to be able to predict the number of tweets a user will be making in 6 years based on some old data, because the number of tweets made by an account does not seem to correlate with the number of followers a user has.
 
 Some idea to perform better would be to have a better history of the account, maybe on a year by year basis instead of a chunk of many year all in one category.

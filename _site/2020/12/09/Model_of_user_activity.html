@@ -21,39 +21,46 @@
       <div class="twelve columns">
         <div class="site-branding">
           <div class="site-title">
-            <a href="https://mathildehermet.github.io/twitter_research_paper_extension/"><h1>Twitter usage study</h1></a>
+            <a href="https://mathildehermet.github.io/twitter_research_paper_extension/">
+              <h1>Twitter usage study</h1>
+            </a>
           </div>
           <div class="site-description">
             <p>Extension of the paper Testing Propositions Derived from Twitter Studies: Generalization and Replication in Computational Social Science from Hai Liang and King-wa Fu</p>
           </div>
         </div>
         <nav class="navbar">
-      <div class="container">
-        <ul class="navbar-list">
-          <li class="navbar-item"><a class="navbar-link" href="https://mathildehermet.github.io/twitter_research_paper_extension/">Home</a></li>
-          
-		  
-          
-		  
-          <li class="navbar-item">
-              <a class="navbar-link" href="https://mathildehermet.github.io/twitter_research_paper_extension/Dataset.html">Dataset</a>
-          </li>
-          
-          
-		  
-          <li class="navbar-item">
-              <a class="navbar-link" href="https://mathildehermet.github.io/twitter_research_paper_extension/typography.html">Typography</a>
-          </li>
-          
-          
-        </ul>
-      </div>
-    </nav>
+          <div class="container">
+            <ul class="navbar-list">
+              <li class="navbar-item"><a class="navbar-link" href="https://mathildehermet.github.io/twitter_research_paper_extension/">Home</a></li>
+              
+              
+              
+              
+              <li class="navbar-item">
+                <a class="navbar-link" href="https://mathildehermet.github.io/twitter_research_paper_extension/Dataset.html">Dataset</a>
+              </li>
+              
+              
+              
+              <li class="navbar-item">
+                <a class="navbar-link" href="https://mathildehermet.github.io/twitter_research_paper_extension/Results.html">Results show case</a>
+              </li>
+              
+              
+              
+              <li class="navbar-item">
+                <a class="navbar-link" href="https://mathildehermet.github.io/twitter_research_paper_extension/typography.html">Typography</a>
+              </li>
+              
+              
+            </ul>
+          </div>
+        </nav>
       </div>
     </div>
   </div>
 </header>
-
 
     <!-- Main Content -->
 <section>
@@ -61,40 +68,54 @@
 	<div class="row">
 		<div class="twelve columns">
 			<div class="post-preview">
-            <header class="post-header">
-              <div class="post-title">
-                 Find a model that fits user activity to predict account future
-              </div>
-              <div class="post-subtitle">
-                Posted by Kali group on December 9, 2020
-              </div>
-            </header>
-            <article class="post-article">
-             <p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+  <header class="post-header">
+    <div class="post-title">
+      Find a model that fits user activity to predict account future
+    </div>
+    <div class="post-subtitle">
+      Posted by Kali group on
+      December 9, 2020
+    </div>
+  </header>
+  <article class="post-article">
+    <div>
+<h4>Abstract</h4>
+<p>
+The goal of this study is to predict the number of tweets a given user will have made in the present based on the data from the original paper, meaning data from 2014, and some data of 2020 such as its new followers’ count. We will try to use two model to perform the predictions : Ridge regression and Gradient boosting regression. 
+</p>
+<h4>Results</h4>
+<p>
+First of all, some cross-validation steps were performed. 
+</p>
+<p>
+<img src="https://mathildehermet.github.io/twitter_research_paper_extension/assets/images/CrossValRidge.png" class="half_width" />
+<legend>Cross Validation for Ridge</legend>
+<img src="https://mathildehermet.github.io/twitter_research_paper_extension/assets/images/CrossValGBR.png" class="half_width" />
+<legend>Cross Validation for Gradient Boosting</legend>
+</p>
+<p>
+Those graphs seem to show, in addition to the best hyperparameters for both models, that Gradient Boosting will be outputting better predictions than Ridge.
+</p>
+<p>
+<img src="https://mathildehermet.github.io/twitter_research_paper_extension/assets/images/rrpred.png" class="half_width" />
+<legend>Ridge prediction vs Actual data</legend>
+<img src="https://mathildehermet.github.io/twitter_research_paper_extension/assets/images/gbrpred.png" class="half_width" />
+<legend>Gradient Boosting vs Actual data</legend>
+</p>
+<p>
+<h4>Analysis</h4>
+<p>
+In reality, both these methods seem to give quite poor results. First of all, each model has a tendency to find some negative values, Gradient Boosting more than Ridge, which we know is impossible as no users could have a negative number of tweets. A reason this might occur is the existence of a reduction in the number of tweets for some user, in fact some user might have deleted their tweets for whatever reason, meaning that the number of tweets over time is going down. Then, we can clearly see a sort of constant at the start of each graph, with the one of Gradient Boosting being lower even though less visible than the one of Ridge, meaning that the models do not distinguish lower values very well.
+All in all, it is unlikely to be able to predict the number of tweets a user will be making in 6 years based on some old data, because the number of tweets made by an account does not seem to correlate with the number of followers a user has.
 
-<p>To add new posts, simply add a file in the <code class="language-plaintext highlighter-rouge">_posts</code> directory that follows the convention <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+Some idea to perform better would be to have a better history of the account, maybe on a year by year basis instead of a chunk of many year all in one category.
+</p>
+&lt;/div&gt;
+</p></div>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
-
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
-
- 
-            </article>
+  </article>
 </div>
-<hr> 
-<div class="pager">
-    
-    
-    <a href="https:/mathildehermet.github.io/twitter_research_paper_extension/2020/12/10/Twitter_usage_allong_month.html" class="button u-pull-right" title="Twitter usage allong the months">Next &rarr;</a>
-    
-</div>
-
+<hr>
 		</div>
 	</div>
 </div>
@@ -108,7 +129,7 @@
         <div class="about">
           <h3>About</h3>
           <div class="profile ">
-            <img src="https://mathildehermet.github.io/twitter_research_paper_extension/assets/images/epfl.jpg" class="u-full-width " />
+            <img src="https://mathildehermet.github.io/twitter_research_paper_extension/assets/images/epfl.jpg" class="quarter_width" />
           </div>
           <div class="about-title">
             Kali

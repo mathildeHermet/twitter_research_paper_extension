@@ -9,20 +9,129 @@ description: "Data story"
 
   <p>The aim of this project is to extend the paper <i> Generalization and Replication in Computational Social
       Science</i> from Hai Liang and King-wa Fu.
-    This paper aims to create a sample of Twitter users network and test on it some propositions that comes from
+    This paper managed to create a representative random sample of Twitter users account and tested some propositions that comes from
     other social media research paper.
-    So our extension was to keep this user network created by the research paper authors and to propose two new
+    Our extension was to keep this network created by the research paper authors and propose two new
     propositions to test with the sample.
     These propositions come from some suppositions, some expectations about social media features, that we had in Kali
     data scientists group.
     Indeed, we thought naively that :
   <ul>
-    <li>There is a monthly usage pattern</li>
-    <li>There is a way to predict from its account features if a user will remain on Twitter</li>
+    <li>There is a monthly usage pattern (certainly people post more during holidays/celebrations!) </li>
+    <li>There is a way to predict a user's future activity based on his number of followers, the number of posts </li>
   </ul>
   </p>
   <p>
-    <b>Discover on the website results and Dataset used to test these propositions</b>
+    <div>
+      <h4>Results</h4>
+      <h5>Monthly Rhythms</h5>
+      <p class="blocktext">
+      Let's first look at how much do people posts during a year.
+      </p>
+          <div class="grid-container">
+              <div class="grid-child one">
+                  <p class="blockimage">
+                  <img src="{{ site.baseurl}}/assets/images/month2011.png" class="full_width" />
+                  </p>
+              </div>
+              <div class="grid-child two">
+                  <p class="blocktext">
+                   As those three graphs show us, there exists only few similarities between the years :  in January, February and March, users tend to always post fewer tweets while the rest
+                  of the months do not seem to follow a defined pattern. We come up with two possible explanations:
+                  First of all, the end of year’s holidays are over and people tend to rest or go on vacation (mainly in swiss ski stations we hope), therefore having less time to post on Twitter. 
+  
+                   </p>
+              </div>
+          </div>
+          <div class="grid-container">
+              <div class="grid-child one">
+                  <p class="blocktext">
+                   The other may be that content creator, such as Youtubers and advertisers,
+                   take their vacation at this time of the year. In fact a lot of expensive ads are created before Christmas as they generate a lot of revenue and 
+                   way less at the start of the year as there are no celebrations. 
+                   Now, content creators’ wages are highly dependent on ads thus making those months, especially January, less profitable.
+                   Therefore, a large portion of them decides to go on vacation at this moment (once again, we hope in swiss ski stations),
+                    making less content for people to interact about on social medias.
+                   </p>
+              </div>
+              <div class="grid-child two">
+                  <p class="blockimage">
+                  <img src="{{ site.baseurl}}/assets/images/month2012.png" class="full_width" />
+                  </p>
+              </div>
+          </div>
+          <div class="grid-container">
+              <div class="grid-child one">
+                  <p class="blockimage">
+                  <img src="{{ site.baseurl}}/assets/images/month2013.png" class="full_width" />
+                  </p>
+              </div>
+              <div class="grid-child two">
+                  <p class="blocktext">
+                   Now, about the other months, there seems to be a different case for each year, this might be explained by different events which create a lot of discussion/post,
+                  such as the US election in late 2011 or the <a href="https://en.wikipedia.org/wiki/UEFA_Euro_2012" style="text-decoration-line: underline;">UEFA EURO in June 2012</a>. 
+                  Looking at the number of tweets made in 2012 by Spanish speakers, who are huge football fans and followed the adventure of their team from start to finish,
+                  a clear spike appears on June compared to the other years. 
+                   </p>
+              </div>
+          </div>
+  </div>
   </p>
+  <p class="images">
+    <div class="row">
+      <div class="col-sm-4">
+          <img src="{{ site.baseurl}}/assets/images/month2011.png" class="img-responsive text-center"/>
+      </div>
+      
+      <div class="col-sm-4">
+        <img src="{{ site.baseurl}}/assets/images/month2012.png" class="img-responsive text-center" />
+      </div>
+
+      <div class="col-sm-4">
+        <img src="{{ site.baseurl}}/assets/images/month2013.png" class="img-responsive text-center" />
+      </div>
+  </div>
+  </p>
+
+  <p>
+    This shows that there is no monthly pattern as the number of tweets seems to be correlated to what happens during the year, thus being highly influenced by
+    predictable or unpredictable events. We could for example imagine that the number of tweets for the year 2020 would explode around
+    March/April because of COVID and around October/November because of this historic US election, having a president that tweets a lot.
+  </p>
+
+  <h5>How much will a user tweet?</h5>
+  <p>
+    Can we predict how much a user will post in 2020, knowing how many followers, followees he has and how those features evolved since 2014. Of course not! 
+    But we still tried just to prove that human behaviour is highly unpredictable.
+  </p>
+  <div>
+    <h4>Results</h4>
+    <p>
+    First of all, some cross-validation steps were performed. 
+    </p>
+    <p>
+    <img src="{{ site.baseurl }}/assets/images/CrossValRidge.png" class="half_width" />
+    <legend>Cross Validation for Ridge</legend>
+    <img src="{{ site.baseurl }}/assets/images/CrossValGBR.png" class="half_width" />
+    <legend>Cross Validation for Gradient Boosting</legend>
+    </p>
+    <p>
+    Those graphs seem to show, in addition to the best hyperparameters for both models, that Gradient Boosting will be outputting better predictions than Ridge.
+    </p>
+    <p>
+    <img src="{{ site.baseurl }}/assets/images/rrpred.png" class="half_width" />
+    <legend>Ridge prediction vs Actual data</legend>
+    <img src="{{ site.baseurl }}/assets/images/gbrpred.png" class="half_width" />
+    <legend>Gradient Boosting vs Actual data</legend>
+    </p>
+    <p>
+    <h4>Analysis</h4>
+    <p>
+    In reality, both these methods seem to give quite poor results. First of all, each model has a tendency to find some negative values, Gradient Boosting more than Ridge, which we know is impossible as no users could have a negative number of tweets. A reason this might occur is the existence of a reduction in the number of tweets for some user, in fact some user might have deleted their tweets for whatever reason, meaning that the number of tweets over time is going down. Then, we can clearly see a sort of constant at the start of each graph, with the one of Gradient Boosting being lower even though less visible than the one of Ridge, meaning that the models do not distinguish lower values very well.
+    All in all, it is unlikely to be able to predict the number of tweets a user will be making in 6 years based on some old data, because the number of tweets made by an account does not seem to correlate with the number of followers a user has.
+    
+    Some idea to perform better would be to have a better history of the account, maybe on a year by year basis instead of a chunk of many year all in one category.
+    </p>
+    </div>
 
 </div>
